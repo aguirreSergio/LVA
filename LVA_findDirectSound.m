@@ -1,9 +1,19 @@
 function [valueMag,positionVec]= LVA_findDirectSound(RI,varargin)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % This function provides the magnitude value and the position in time
-% vector. 
+% vector.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% OUTPUT: valueMag:    Magnitude value from selected peak (direct sound)
+% OUTPUT: positionVec: Vector Position from peak into time vector
+% 
+% INPUT: ImpulseResponse: Impulse response itaAudio Format
+% INPUT: Tolerancy: Tolerancy in dB allowed
+% INPUT: SamplesToAdd: ~Optional~ Add samples provides the choiced number of
+% samples after the value positionVec (it´s a positive shift in time)
+%
 % Sintax: [valueMag, positionVec]= LVA_findDirectSound(ImpulseResponse,Tolerancy,SamplesToAdd)
 % 
-% Dependence: 
+% Dependences: 
 % ITA-Toolbox: ita_time_window
 % findpeaks
 % 
